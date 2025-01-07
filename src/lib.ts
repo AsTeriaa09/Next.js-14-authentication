@@ -5,6 +5,7 @@ export interface SessionData {
   username?: string;
   ing?: string;
   isPro?: boolean;
+  isLoggedIn:boolean,
 }
 
 export const sessionOptions: SessionOptions = {
@@ -15,3 +16,7 @@ export const sessionOptions: SessionOptions = {
     secure:process.env.NODE_ENV === "production"
   }
 };
+
+export const defaultSession: SessionData ={
+    isLoggedIn: false
+}
